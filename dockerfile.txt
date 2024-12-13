@@ -1,8 +1,8 @@
 FROM learnitguide/busapp:development
 
-COPY busapp-webapp/ /usr/src/busapp-webapp/
+COPY busapp-webapp/ /
 
-WORKDIR /usr/src/busapp-webapp
+WORKDIR /
 
 CMD pm2-docker serve.js --machine-name $MACHINE_NAME
 

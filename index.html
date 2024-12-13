@@ -1,11 +1,13 @@
-# Use an official Nginx image as the base
-FROM nginx:latest
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Docker App</title>
+</head>
+<body>
+    <h1>Hello from Docker!</h1>
+</body>
+</html>
 
-# Copy the local HTML file to the Nginx directory
-COPY index.html /usr/share/nginx/html/index.html
-
-# Expose port 80
-EXPOSE 80
-
-# Start Nginx when the container runs
-CMD ["nginx", "-g", "daemon off;"]
